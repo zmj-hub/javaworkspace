@@ -1,3 +1,5 @@
+import domin.Student;
+
 import java.util.List;
 
 public class Company {

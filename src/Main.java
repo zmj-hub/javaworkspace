@@ -1,12 +1,10 @@
-import java.io.*;
-import java.util.Arrays;
-import java.util.HashMap;
+import domin.Student;
 
 public class Main {
 
     public static void main(String[] args) {
 //        HashMap hashMap=new HashMap();
-//        Student student=new Student("123","643543");
+//        domin.Student student=new domin.Student("123","643543");
 //        System.out.println(student.toString());
 //        ObjectOutputStream outputStream;
 //        ObjectInputStream inputStream;
@@ -15,7 +13,7 @@ public class Main {
 //            outputStream =new  ObjectOutputStream(new FileOutputStream(path));
 //            outputStream.writeObject(student);
 //            inputStream=new ObjectInputStream(new FileInputStream(path));
-//            Student student1= (Student) inputStream.readObject();
+//            domin.Student student1= (domin.Student) inputStream.readObject();
 //           System.out.println(student1.toString());
 //        } catch (IOException e) {
 //            e.printStackTrace();

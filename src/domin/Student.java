@@ -1,9 +1,10 @@
-import java.awt.*;
+package domin;
+
 import java.io.Serializable;
 
 public class Student implements Serializable {
     private String name1;
-//    private String name2;
+    //    private String name2;
     private String sex;
     private Integer age;
 
@@ -21,7 +22,7 @@ public class Student implements Serializable {
         this.age = age;
     }
 
-//    public Student(String name1, String name2, String sex, Integer age) {
+//    public domin.Student(String name1, String name2, String sex, Integer age) {
 //        this.name1 = name1;
 //        this.name2 = name2;
 //        this.sex = sex;
@@ -47,7 +48,7 @@ public class Student implements Serializable {
     public Student() {
     }
 
-//    public Student(String name1, String name2) {
+//    public domin.Student(String name1, String name2) {
 //        this.name1 = name1;
 //        this.name2 = name2;
 //    }
@@ -70,7 +71,7 @@ public class Student implements Serializable {
 //
 //    @Override
 //    public String toString() {
-//        return "Student{" +
+//        return "domin.Student{" +
 //                "name1='" + name1 + '\'' +
 //                ", name2='" + name2 + '\'' +
 //                '}';
@@ -78,7 +79,7 @@ public class Student implements Serializable {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "domin.Student{" +
                 "name1='" + name1 + '\'' +
                 ", sex='" + sex + '\'' +
                 ", age=" + age +

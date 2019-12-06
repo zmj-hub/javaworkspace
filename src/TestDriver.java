@@ -5,20 +5,20 @@ public class TestDriver {
     public static void main(String[] args) {
 //        Map map = new HashMap();
 /*
-        Student student1 = new Student("aa","a",12);
-        Student student2 = new Student("bb","b",22);
-        Student student3 = new Student("cc","b",42);
-        Student student4 = new Student("dd","a",22);
-        List<Student> studentList = new ArrayList<>();
+        domin.Student student1 = new domin.Student("aa","a",12);
+        domin.Student student2 = new domin.Student("bb","b",22);
+        domin.Student student3 = new domin.Student("cc","b",42);
+        domin.Student student4 = new domin.Student("dd","a",22);
+        List<domin.Student> studentList = new ArrayList<>();
 
         studentList.add(student1);
         studentList.add(student2);
         studentList.add(student3);
         studentList.add(student4);
-        String name=studentList.stream().map(Student::getName1).collect(Collectors.joining());
+        String name=studentList.stream().map(domin.Student::getName1).collect(Collectors.joining());
         System.out.println(name);*/
 
-//        Optional<Student> optional = studentList.stream(temp -> temp.getSex()).findAny();
+//        Optional<domin.Student> optional = studentList.stream(temp -> temp.getSex()).findAny();
 
 //        System.out.println(optional.get());
 

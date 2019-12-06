@@ -1,9 +1,11 @@
+import domin.Student;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import	java.util.Iterator;
-import	java.util.stream.Collectors;
+
 public class TestOptional {
     public static void main(String[] args) {
         Student student = new Student();
@@ -40,7 +42,7 @@ public class TestOptional {
             System.out.println("我是"+student5.getName1());
         }
 
-//        studentList.stream().filter(u->u.getAge()>18).map(Student::getName1).forEach(s -> System.out.println(s));
+//        studentList.stream().filter(u->u.getAge()>18).map(domin.Student::getName1).forEach(s -> System.out.println(s));
 
     }
 }

@@ -1,8 +1,8 @@
-import javax.swing.text.html.Option;
+import domin.Student;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Test {
@@ -38,9 +38,9 @@ public class Test {
         list.add(student4);
         Map<String, Integer> map = list.stream().collect(Collectors.toMap(Student::getName1, Student::getAge));
         System.out.println(map.get("111"));
-//        Iterator<Student> iterator = list.iterator();
+//        Iterator<domin.Student> iterator = list.iterator();
 //        while (iterator.hasNext()) {
-//            Student stu = iterator.next();
+//            domin.Student stu = iterator.next();
 //            if (stu.getAge().equals(21)) {
 //                System.out.println(stu.toString());
 //            }
