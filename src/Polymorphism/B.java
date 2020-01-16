@@ -7,6 +7,6 @@ public class B  extends A{
         System.out.println("我是B");
     }
     public void fun(){
-        System.out.println("Fun B");
+        System.out.println("Fun Singleton.B");
     }
 }

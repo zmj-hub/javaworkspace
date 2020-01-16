@@ -1,3 +1,5 @@
+package Singleton;
+
 /**
  * 单例模式：饿汉模式
  */

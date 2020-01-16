@@ -1,3 +1,5 @@
+package Singleton;
+
 import java.util.concurrent.CountDownLatch;
 
 /**
