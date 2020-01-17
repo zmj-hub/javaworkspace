@@ -6,8 +6,9 @@ import java.text.NumberFormat;
 
 public class Scribble {
     public static void main(String[] args) {
-        String ss = "qweqrrqtqtqwq";
-        System.out.println(ss.substring(2));
+        System.out.println();
+//        String ss = "qweqrrqtqtqwq";
+//        System.out.println(ss.substring(2));
         /*
         * 弱引用*/
 //        String str = new String("abc");

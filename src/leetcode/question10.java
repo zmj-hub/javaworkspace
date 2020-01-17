@@ -1,5 +1,8 @@
 package leetcode;
 
+enum Result {
+    TRUE, FALSE
+}
 public class question10 {
     /*
     * 给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
@@ -47,21 +50,46 @@ s = "mississippi"
 p = "mis*is*p*."
 输出: false
 */
+    static Result[][] memo;
     public static void main(String[] args) {
         System.out.println(isMatch("aab","c*a*b"));
     }
     private static boolean isMatch(String s, String p) {
+        memo = new Result[s.length() + 1][p.length() + 1];
+        return dp(0, 0, s, p);
 
-        if (p.isEmpty()) return s.isEmpty();
-        boolean first_match = (!s.isEmpty() &&
-                (p.charAt(0) == s.charAt(0) || p.charAt(0) == '.'));
 
-        if (p.length() >= 2 && p.charAt(1) == '*'){
-            return (isMatch(s, p.substring(2)) ||
-                    (first_match && isMatch(s.substring(1), p)));
-        } else {
-            return first_match && isMatch(s.substring(1), p.substring(1));
-        }
+        /*动态规划*/
+
+//        boolean[][] dp = new boolean[s.length() + 1][p.length() + 1];
+//        dp[s.length()][p.length()] = true;
+//
+//        for (int i = s.length(); i >= 0; i--){
+//            for (int j = p.length() - 1; j >= 0; j--){
+//                boolean first_match = (i < s.length() &&
+//                        (p.charAt(j) == s.charAt(i) ||
+//                                p.charAt(j) == '.'));
+//                if (j + 1 < p.length() && p.charAt(j+1) == '*'){
+//                    dp[i][j] = dp[i][j+2] || first_match && dp[i+1][j];
+//                } else {
+//                    dp[i][j] = first_match && dp[i+1][j+1];
+//                }
+//            }
+//        }
+//        return dp[0][0];
+        
+        /*回溯法*/
+
+//        if (p.isEmpty()) return s.isEmpty();
+//        boolean first_match = (!s.isEmpty() &&
+//                (p.charAt(0) == s.charAt(0) || p.charAt(0) == '.'));
+//
+//        if (p.length() >= 2 && p.charAt(1) == '*'){
+//            return (isMatch(s, p.substring(2)) ||
+//                    (first_match && isMatch(s.substring(1), p)));
+//        } else {
+//            return first_match && isMatch(s.substring(1), p.substring(1));
+//        }
 
 
 
@@ -109,5 +137,28 @@ p = "mis*is*p*."
 //
 //        return dp[len-1];
     }
+    public static boolean dp(int i, int j, String text, String pattern) {
+        if (memo[i][j] != null) {
+            return memo[i][j] == Result.TRUE;
+        }
+        boolean ans;
+        if (j == pattern.length()){
+            ans = i == text.length();
+        } else{
+            boolean first_match = (i < text.length() &&
+                    (pattern.charAt(j) == text.charAt(i) ||
+                            pattern.charAt(j) == '.'));
+
+            if (j + 1 < pattern.length() && pattern.charAt(j+1) == '*'){
+                ans = (dp(i, j+2, text, pattern) ||
+                        first_match && dp(i+1, j, text, pattern));
+            } else {
+                ans = first_match && dp(i+1, j+1, text, pattern);
+            }
+        }
+        memo[i][j] = ans ? Result.TRUE : Result.FALSE;
+        return ans;
+    }
+
 
 }
