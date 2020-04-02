@@ -7,9 +7,22 @@ public class Student implements Serializable {
     //    private String name2;
     private String sex;
     private Integer age;
+    private Boolean flage;
 
     public String getName1() {
-        return name1;
+        return name1 + "22222";
+    }
+
+    public String getName1Cn() {
+        return flage != null && flage ? "是" : "否";
+    }
+
+    public Boolean getFlage() {
+        return flage;
+    }
+
+    public void setFlage(Boolean flage) {
+        this.flage = flage;
     }
 
     public void setName1(String name1) {
