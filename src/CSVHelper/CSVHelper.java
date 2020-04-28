@@ -25,16 +25,16 @@ public class CSVHelper {
 //        result.add(sql);
         System.out.println(line);
     }
-
+//
     public static List<String> read(String fieldPath) throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(fieldPath),"GBK"));
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(fieldPath),"GBK"));
         List<String> result = new ArrayList<>();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            change(result, line);
-        }
-        reader.close();
-        System.out.println("--------------------读取成功--------------------");
+//        String line;
+//        while ((line = reader.readLine()) != null) {
+//            change(result, line);
+//        }
+//        reader.close();
+//        System.out.println("--------------------读取成功--------------------");
         return result;
     }
 

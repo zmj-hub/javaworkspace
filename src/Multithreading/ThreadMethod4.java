@@ -6,11 +6,17 @@ import java.util.concurrent.Executors;
 public class ThreadMethod4 {
     private static int POOL_NUM = 10;
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
-        for (int i = 0; i <POOL_NUM ; i++) {
-//        RunnableThread runnableThread = new RunnableThread();
-        executorService.execute(new RunnableThread());
-        }
+        ExecutorService executorService = Executors.newFixedThreadPool(5);//创建固定大小的线程池
+//        ExecutorService executorService = Executors.newCachedThreadPool();//缓存线程池，线程池的数量不固定，可以根据需求自动的更改数量。
+//        ExecutorService executorService = Executors.newSingleThreadExecutor();//创建单个线程池。 线程池中只有一个线程
+//        for (int i = 0; i <POOL_NUM ; i++) {
+////        RunnableThread runnableThread = new RunnableThread();
+//        executorService.execute(new RunnableThread());
+//        }
+        RunnableThread runnableThread = new RunnableThread();
+        runnableThread.run();
+        Thread thread = new Thread(runnableThread);
+        thread.start();
         executorService.shutdown();
     }
 }
