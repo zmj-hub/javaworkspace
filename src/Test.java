@@ -4,20 +4,17 @@ public class Test {
 //        System.out.println(test());
 //        String ss="00201221201212";
 //        System.out.println(ss.length());
-        System.out.println(1&4);
+        test();
     }
 
-    public static Boolean test() {
-        int a = 1, b = 2;
-        switch (a) {
-            case 1:
-                if (b == 1)
-                    return true;
-            case 2:
-                if (b == 2)
-                    return true;
-            default:
-                return false;
+    public static void test() {
+        for (int i = 1; i < 1000; i++) {
+            if (String.valueOf(i).contains("7")) {
+                System.out.print("过"+" ");
+            } else if (i % 7 == 0) {
+                System.out.print("过"+" ");
+            } else
+                System.out.print(i+" ");
         }
     }
 
